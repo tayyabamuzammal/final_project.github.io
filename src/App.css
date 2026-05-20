@@ -1,0 +1,78 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Top red bar */
+.top-bar {
+  background: #d32f2f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 4 BOXES CONTAINER */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+}
+
+/* INDIVIDUAL BOX */
+.menu-container > div {
+  background: #d32f2f;
+  color: white;
+  flex: 1 1 100%;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ICON + TEXT */
+.menu-container svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  margin-bottom: 10px;
+}
+
+.menu-container p,
+.menu-container span {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* TABLET: 2 BOXES PER LINE */
+@media (min-width: 768px) {
+  .menu-container > div {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* DESKTOP: 4 BOXES PER LINE */
+@media (min-width: 1024px) {
+  .menu-container > div {
+    flex: 1 1 calc(25% - 10px);
+  }
+}
